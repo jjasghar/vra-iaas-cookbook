@@ -9,6 +9,8 @@ need an example the [mysql](https://github.com/chef-cookbooks/mysql) cookbook
 is a good place to start.
 
 ## Requirements
+vRA Requirements Documentation
+https://docs.vmware.com/en/vRealize-Automation/7.3/vrealize-automation-73-installation-and-configuration.pdf
 
 TODO: Enter any requirements for the coobook.
 
