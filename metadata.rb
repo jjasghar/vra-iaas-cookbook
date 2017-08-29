@@ -10,6 +10,9 @@ chef_version '>= 12'
 
 # TODO: any Dependacies?
 # depends 'chefdk', '> 1.0.0'
+depends 'java', '~> 1.0'
+depends 'iis', '~> 6.7.2'
+
 
 # TODO: Platform support....
 %w(ubuntu debian redhat centos suse opensuse).each do |os|
