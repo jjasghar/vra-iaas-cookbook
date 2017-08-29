@@ -1,20 +1,32 @@
 ---
 driver:
-  name: vagrant
+  name: vcenter
+  vcenter_username: 'administrator@vsphere.local'
+  vcenter_password: 'Good4bye!'
+  vcenter_host: '172.16.20.2'
+  vcenter_disable_ssl_verify: true
 
 provisioner:
   name: chef_zero
+  sudo_command: sudo
 
 verifier:
   name: inspec
-  format: doc
+
+transport:
+  name: winrm
+  elevated: true
+  username: administrator
+  password: "Admini@"
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7.2
+  - name: windows2012R2
+    driver_config:
+      targethost: 172.16.20.42
+      template: windows2012R2
+      datacenter: "Datacenter"
 
 suites:
   - name: default
-    run_list:
-      - recipe[vra-iaas-cookbook::default]
-    attributes:
+run_list:
+  - recipe[vra-iaas-cookbook::default]

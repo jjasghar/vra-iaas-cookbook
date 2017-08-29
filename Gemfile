@@ -5,8 +5,9 @@ gem 'chef-sugar'
 gem 'kitchen-dokken'
 gem 'kitchen-inspec'
 gem 'kitchen-vagrant'
-# gem 'kitchen-vcenter'
+gem 'kitchen-vcenter'
 gem 'test-kitchen'
+gem 'winrm-elevated'
 
 group :development do
   gem 'chefspec'
